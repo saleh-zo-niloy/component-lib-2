@@ -1,9 +1,12 @@
 {
   "name": "component-lib-2",
   "version": "0.0.0",
-  "main": "fesm2022/component-lib-2.mjs",
-  "module": "fesm2022/component-lib-2.mjs",
-  "typings": "index.d.ts",
+  "main": "dist/component-lib-2/fesm2022/component-lib-2.mjs",
+  "module": "dist/component-lib-2/fesm2022/component-lib-2.mjs",
+  "typings": "dist/component-lib-2/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
