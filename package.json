@@ -10,7 +10,7 @@
     "format": "prettier --write \"**/*.{ts,html,scss,css,md,json}\"",
     "check-format": "prettier --check \"**/*.{ts,html,scss,css,md,json}\"",
     "lint": "ng lint",
-    "prepare": "husky",
+    "prepare": "npm run lib:build",
     "storybook": "ng run component-lib-2:storybook",
     "build-storybook": "ng run component-lib-2:build-storybook",
     "lib:watch": "ng build component-lib-2 --watch --configuration development",
