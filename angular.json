@@ -3,5 +3,72 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "component-lib-2": {
+      "projectType": "library",
+      "root": "projects/component-lib-2",
+      "sourceRoot": "projects/component-lib-2/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/component-lib-2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/component-lib-2/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/component-lib-2/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/component-lib-2/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/component-lib-2/**/*.ts",
+              "projects/component-lib-2/**/*.html"
+            ],
+            "eslintConfig": "projects/component-lib-2/eslint.config.js"
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/component-lib-2/.storybook",
+            "browserTarget": "component-lib-2:build",
+            "compodoc": false,
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/component-lib-2/.storybook",
+            "browserTarget": "component-lib-2:build",
+            "compodoc": false,
+            "outputDir": "storybook-static"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false,
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }
