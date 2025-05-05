@@ -1,7 +1,10 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
-/dist
+/dist/*
+!/dist/component-lib-2
+/dist/component-lib-2/*
+!/dist/component-lib-2/component-lib-2-0.0.1.tgz
 /tmp
 /out-tsc
 /bazel-out
