@@ -1,6 +1,9 @@
 {
   "name": "component-lib-2",
   "version": "0.0.1",
+  "scripts": {
+    "prepare": "ng build component-lib-2 --configuration development"
+  },
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"
