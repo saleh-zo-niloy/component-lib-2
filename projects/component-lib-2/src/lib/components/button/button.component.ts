@@ -4,6 +4,10 @@ import { Component } from '@angular/core';
   selector: 'lib-btn',
   imports: [],
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css',
+  styleUrls: [
+    '../../styles/tailwind.input.css',
+    '../../styles/tailwind.css',
+    './button.component.css',
+  ],
 })
 export class ButtonComponent {}
