@@ -19,8 +19,8 @@
     "prepare": "npm run lib:build",
     "storybook": "ng run component-lib-2:storybook",
     "build-storybook": "ng run component-lib-2:build-storybook",
-    "lib:watch": "npx tailwindcss -i ./projects/component-lib-2/src/lib/styles/tailwind.input.css -o ./projects/component-lib-2/src/lib/styles/tailwind.generated.css && ng build component-lib-2 --watch --configuration development",
-    "lib:build": "npx tailwindcss -i ./projects/component-lib-2/src/lib/styles/tailwind.input.css -o ./projects/component-lib-2/src/lib/styles/tailwind.generated.css && ng build component-lib-2 --configuration development"
+    "lib:watch": "npx tailwindcss -i ./projects/component-lib-2/src/lib/styles/tailwind.input.css -o ./projects/component-lib-2/src/lib/styles/tailwind.generated.css --minify && ng build component-lib-2 --watch --configuration development",
+    "lib:build": "npx tailwindcss -i ./projects/component-lib-2/src/lib/styles/tailwind.input.css -o ./projects/component-lib-2/src/lib/styles/tailwind.generated.css --minify && ng build component-lib-2 --configuration development"
   },
   "private": true,
   "dependencies": {
@@ -32,7 +32,6 @@
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@tailwindcss/cli": "^4.1.5",
-    "@tailwindcss/postcss": "^4.1.5",
     "postcss": "^8.5.3",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.1.5",
@@ -49,6 +48,7 @@
     "@storybook/angular": "^8.6.12",
     "@storybook/blocks": "^8.6.12",
     "@storybook/test": "^8.6.12",
+    "@tailwindcss/postcss": "^4.1.5",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.3.0",
     "cypress": "^14.3.2",
